@@ -1,15 +1,4 @@
-#!/usr/bin/env python3
-"""
-train_and_record.py
 
-Extended DQN training & per-episode frame saving with reduced memory via uint8 replay.
-Runs MountainCar-v0 from pixels, saves full episodes of frames, logs to TensorBoard.
-
-Usage example:
-  python train_and_record.py \
-    --episodes 100 --max_steps 10000 --image_size 84 --render --device cuda
-  tensorboard --logdir runs/train_and_record
-"""
 import os, random, argparse, numpy as np
 from collections import deque
 from PIL import Image
